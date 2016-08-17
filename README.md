@@ -17,7 +17,7 @@ Open a command prompt at the **project folder** and execute following commands:
 5. Run `gulp image` whenever you add an image into the src folder, this command will optimize images and copy them in the dist folder.
 6. Run `firebase deploy` to deploy changes to test env https://sweet-arsenic.firebaseapp.com/#/
 
-## Notes and Authentication
+## Notes
 - The app has been built with the following tech:
 	- Gulp as task runner to build and serve the website on browser
 	- Twitter Bootstrap as a layout framework
