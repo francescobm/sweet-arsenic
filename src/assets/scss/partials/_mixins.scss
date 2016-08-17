@@ -1,0 +1,55 @@
+/* ---------------------
+Responsive breakpoints
+---------------------- */
+$screen-xsmall-portrait: 480px;
+$screen-xsmall-portrait-and-up: 481px;
+$screen-xsmall: 767px;
+$screen-small: 768px;
+$screen-medium: 992px;
+$screen-large: 1280px;
+
+
+@mixin respond-to($media) {
+
+  @if $media == xsmall {
+    @media (max-width: $screen-xsmall) { @content; }
+  }
+
+  @else if $media == small {
+    @media (min-width: $screen-small) { @content; }
+  }
+  @else if $media == medium {
+    @media (min-width: $screen-medium) { @content; }
+  }
+  @else if $media == large {
+    @media (min-width: $screen-large) { @content; }
+  }
+
+  /*Sepcific devices media queries*/
+
+  @else if $media == xsmall-portrait {
+    @media (max-width: $screen-xsmall-portrait) { @content; }
+  }
+
+  @else if $media == xsmall-portrait-and-up {
+    @media (min-width: $screen-xsmall-portrait-and-up) { @content; }
+  }
+
+  @else if $media == xsmall-portrait-and-up {
+    @media (min-width: $screen-xsmall-portrait-and-up) { @content; }
+  }
+
+  @else if $media == small-and-below {
+    @media (max-width: $screen-medium - 1) { @content; }
+  }
+
+  @else if $media == small-only {
+    @media (min-width: $screen-small) and (max-width: $screen-medium - 1) { @content; }
+  }
+
+  @else if $media == medium-only {
+    @media (min-width: $screen-medium) and (max-width: $screen-large -1) { @content; }
+  }
+  
+
+}

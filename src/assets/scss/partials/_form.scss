@@ -1,0 +1,103 @@
+form{
+	margin:0 auto;
+	width:100%;
+	button{
+		&.absolute{
+			position:absolute;
+			z-index:999;
+			width:100px;
+			margin-left:-50px;
+			background:none;
+			border:none;
+			font-size:26px;
+			color:$color-white;
+			font-weight:normal;
+			outline:none;
+		}
+	}
+	&.newsletter{
+		input{
+			text-align:center;
+			height:30px;
+			border-bottom:none;
+			color: $color-font-dark;
+			background-image: url(../images/input/input-arrow-left.png), url(../images/input/input-arrow-right.png);
+	    	background-position: left, right;
+	    	background-repeat: no-repeat, no-repeat;
+	    	background-size: 15px, 15px;
+	    	padding: 0 20px;
+	    	outline:none;
+			@include respond-to(xsmall){
+				width:100%;
+			}
+			@include respond-to(small){
+				width:40%;
+			}
+		}
+		input::-webkit-input-placeholder {
+			color: $color-font-dark;
+		}
+		button{
+			&.absolute{
+				left:50%;
+			}
+		}
+	}	
+	&.contact{
+		button{
+			&.absolute{
+				background: url(../images/home/btn-news-bg.png) no-repeat;
+				background-size: 110px;
+				bottom: -40px;
+   				width: 110px;
+    			height: 110px;
+				@include respond-to(xsmall){
+					margin-left: -55px;
+    				left: 50%;
+    				bottom: -120px;
+				}
+				@include respond-to(small){
+					bottom: -40px;
+					margin-left: -70px;
+				}
+			}
+		}
+		input,textarea{
+			display:block;
+			background:none;
+			outline:none;
+			@include respond-to(xsmall){
+				width:200px;
+			}
+			@include respond-to(small){
+				width:300px;
+			}
+			@include respond-to(medium){
+				width:400px;
+			}
+		}
+		textarea{
+			overflow:hidden;
+			border:1px solid $color-white;
+			height:200px;
+			padding:10px;
+			margin:40px 0 80px 60px;
+			@include respond-to(xsmall){
+				margin: 20px auto 80px;
+			}
+			
+		}
+		input{
+			margin:20px 0 0 60px;
+			border-top:none;
+			border-left:none;
+			border-right:none;
+			border-bottom:1px solid $color-white;
+			height: 40px;
+    		padding-bottom: 10px;
+    		@include respond-to(xsmall){
+				margin: 20px auto;
+			}
+		}
+	}
+}

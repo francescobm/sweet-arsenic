@@ -1,0 +1,59 @@
+.button{
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	display:block;
+	z-index:999;
+	width:242px;
+	height:242px;
+	text-transform:uppercase;
+	text-decoration:none;
+	font-size:24px;
+	
+	&:hover, &:active, &:focus{
+		text-decoration: none;
+		color:$color-font-dark;
+	}
+	&.btn-news{
+		background: url(../images/home/btn-news-bg.png) no-repeat;
+		color:$color-font-dark;
+		bottom:-40px;
+		padding-top:105px;
+	}
+	&.btn-about{
+		background: url(../images/buttons/btn-works.png) no-repeat;
+		color:$color-white;
+		bottom:-100px;
+		opacity:0.8;
+		padding-top:95px;
+	}
+}
+.btn-white{
+	@include respond-to(xsmall){
+		display:block;
+		width:100%;
+		color:$color-white;
+		padding-bottom:10px;
+		border-bottom: 1px solid $color-dark-grey;
+		&:hover{
+			color: $color-white;
+		}
+	}
+	@include respond-to(small){
+		display:block;
+		margin:20px auto 0px;
+		width:111px;
+		height:35px;
+		background: url(../images/buttons/btn-white-bg.png) no-repeat;
+		color:$color-font-dark;
+		text-transform:uppercase;
+		text-decoration:none;
+		text-align:center;
+		&:hover, &:focus, &:active{
+			color:$color-font-dark;
+			text-decoration:none;
+		}
+	}
+}

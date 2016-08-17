@@ -1,0 +1,74 @@
+.head{
+	@include respond-to(xsmall){
+		display:none;
+	}
+	@include respond-to(small){
+		height:120px;
+		background: $color-white;
+		padding-top:40px;
+		.logo{
+			position:absolute;
+			margin-left: auto;
+			margin-right: auto;
+			left: 0;
+			right: 0;
+			top:120px;
+			z-index:999;
+		}
+	}
+	
+}
+.navbar{
+	margin-bottom:0px;
+	border:none;
+	&.navbar-default{
+		min-height: 0px;
+		.navbar-toggle{
+			border: 1px solid $color-font-dark;
+			&:hover, &:active, &:focus{
+				background: $color-grey;
+			}
+			.icon-bar{
+				background-color:$color-font-dark;
+			}
+		}
+		.navbar-brand{
+			@include respond-to(small){
+				display:none;
+			}
+		}
+		.navbar-nav{
+			li{
+				a{
+					color:$color-font-dark;
+					font-family:$font-primary;
+					@include respond-to(xsmall){
+						padding:15px;
+					}
+					@include respond-to(small){
+						padding:5px 5px;
+					}
+					@include respond-to(medium){
+						padding:5px 25px;
+					}
+					@include respond-to(large){
+						padding:5px 35px;
+					}
+					
+				}
+			}
+		}
+	}
+	&.sa-header{
+		
+		@include respond-to(xsmall){
+			background: $color-white;
+			height:60px;
+		}
+		@include respond-to(small){
+			background: $color-grey;
+			height:30px;
+		}
+		
+	}
+} 

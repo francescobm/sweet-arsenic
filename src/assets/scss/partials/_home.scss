@@ -1,0 +1,147 @@
+.news{
+	background: url(../images/home/news-bg.jpg) no-repeat;
+	background-size:cover;
+	color:$color-dark;
+	.article{
+		img{
+			&.logo-news{
+				margin-top:10px;
+			}
+			&.article{
+				@include respond-to(xsmall){
+					display:none;
+				}
+				@include respond-to(small){
+					width:220px;
+				}
+				@include respond-to(medium){
+					width:300px;
+				}
+				@include respond-to(large){
+					width:336px;
+				}
+			}
+		}
+		h4{	
+			@include respond-to(xsmall){
+				padding-top:10px;
+			}
+			@include respond-to(small){
+				padding-top:30px;
+			}
+		}
+		.date{
+			color:$color-white;
+			font-size:18px;
+		}
+	}
+	.row{
+		&:nth-child(2){
+			@include respond-to(xsmall){
+				padding-top:40px;
+			}
+			@include respond-to(small){
+				padding-top:80px;
+			}
+			
+		}
+	}
+	.more-news{
+		height: 242px;
+	}
+}
+
+.subscribe{
+	background: $color-dark;
+	img{
+		display:block;
+		margin:0 auto;
+		&.letter{
+			margin-top:30px;
+		}
+	}
+	p{
+		color:$color-grey-text;
+		&.lead{
+			color:$color-white;
+			margin-top:15px;
+			margin-bottom:5px;
+		}
+	}
+}
+
+.works{
+	background: url(../images/home/work-section-bg.jpg) no-repeat;
+	background-size:cover;
+	color:$color-white;
+	h3{	
+		&.heading-top{
+			margin-top:60px;
+			margin-bottom:20px;
+		}
+	}
+	h4{
+		margin-top:60px;
+		margin-bottom:200px;
+	}
+	.overlay{
+		height:130px;
+		background: url(../images/home/bottom-works-bg.png) no-repeat;
+		background-size:100%;
+		background-position:center bottom;
+	}
+}
+
+.contacts{
+	color: $color-white;
+	background: $color-dark;
+	.form-contact-image{
+		@include respond-to(xsmall){
+			margin:0 auto;
+			display:block;
+			width:100%;
+		}
+		@include respond-to(small){
+			margin-right:20px;
+			float:right;
+			display:block;
+			width:100%;
+		}
+	}
+}
+
+.social{
+	.container{
+		background: url(../images/home/social-man.png) no-repeat;
+		background-position: calc(100% - 50px) bottom;
+		height:400px;
+		@include respond-to(xsmall){
+			background:none;
+		}
+		.social-icons{
+			@include respond-to(xsmall){
+				margin-top:220px;
+				text-align:center;
+				width:100%;
+			}
+			@include respond-to(small){
+				text-align:right;
+				margin-top:0px
+			}
+			@include respond-to(medium){
+				text-align:right;
+				margin-top:100px;
+			}
+		}
+	}
+	.image-rotated{
+		transform: rotate(180deg); 
+	} 
+}
+
+footer{
+	background: $color-dark;
+	height:200px;  
+	color:$color-white;
+	padding:70px; 
+}

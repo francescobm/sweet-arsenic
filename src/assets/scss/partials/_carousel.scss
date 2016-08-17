@@ -1,0 +1,102 @@
+.carousel-inner{
+	@include respond-to(xsmall){
+		border-bottom:20px solid $color-dark;
+	}
+	.caption-custom{
+			@include respond-to(xsmall){
+				display:none;
+			}
+			@include respond-to(small){
+				position:absolute;
+				width:500px;
+				height:237px;
+				background: url(../images/carousel/triangle-bg.png) no-repeat;
+				z-index:998;
+				margin: 0 auto;
+	  			left: 0;
+	  			right: 0;
+	  			color:$color-white;
+	  			h3{
+	  				margin-top: 70px;
+	    			text-transform: uppercase;
+	    			margin-bottom: 5px;
+	  			}
+	  			p{
+	  				text-transform: uppercase;
+	    			font-size: 12px;
+	  			}
+	  			img{
+	  				margin-top:10px;
+	  			}
+	  		}
+	}
+	.item{
+		@include respond-to(xsmall){
+			height:200px;
+		}
+		@include respond-to(small){
+			height:500px;
+		}
+		
+		&.first{
+			background: url(../images/carousel/slide1.jpg);
+			background-size: cover;
+		}
+	}
+}
+.carousel-indicators{
+	@include respond-to(xsmall){
+		display:none;
+	}
+	@include respond-to(small){
+		bottom:0px;
+		margin-bottom:0px;
+		width:100%;
+		margin-left:-50%;
+		background-color: $color-dark;
+		min-height:60px;
+		padding:20px;
+		list-style-type:none;
+		li{
+			background: url(../images/carousel/bullet.png) no-repeat;
+	        background-size:30px 30px;
+	        width:30px;
+	        height:30px;
+	        cursor: pointer;
+	        text-align:center;
+	        border:none;
+	        margin:0px;
+	        padding:0px;
+	        &.active{
+	        	background: url(../images/carousel/bullet-full.png) no-repeat;
+	        	background-size:30px 30px;
+	        	width:30px;
+		        height:30px;
+	        }
+		}
+	}
+}
+.carousel-control{
+	@include respond-to(xsmall){
+		display:none;
+	}
+	@include respond-to(small){
+		max-height:500px !important;
+		.arrow-left,
+		.arrow-right{
+			position:absolute;
+			width: 72px;
+		    height: 101px;
+		    display: inline-block;
+		    top: 40%;
+		}
+		.arrow-left{
+			background: url(../images/carousel/arrow-left.png) no-repeat;
+			right:0px;
+		}
+		.arrow-right{
+			background: url(../images/carousel/arrow-right.png) no-repeat;
+			left:0px;
+		}
+	}
+}
