@@ -15,12 +15,7 @@ Open a command prompt at the **project folder** and execute following commands:
 2. Run `bower install` to update your bower packages
 4. Run `gulp serve` to launch the project. A dist folder will be created and served on browser.
 5. Run `gulp image` whenever you add an image into the src folder, this command will optimize images and copy them in the dist folder.
-6. You'll find the working files on src folder.
-7. Dist folder contains compiled files ready for deployment.
-8. The styling of layout is handled in src/assets/scss/partials.
-9. Once you run the command gulp serve, whenever you change and save a file in src folder a task will run and the website will be rebuilt in local, so that you can see immediately your changes.
-10. On src/app/index.es6 is where you'll see the application main file, here is defined routing, page templates and controllers.
-11. Run `firebase deploy` to deploy changes to test env https://sweet-arsenic.firebaseapp.com/#/
+6. Run `firebase deploy` to deploy changes to test env https://sweet-arsenic.firebaseapp.com/#/
 
 ## Notes and Authentication
 - The app has been built with the following tech:
@@ -28,4 +23,9 @@ Open a command prompt at the **project folder** and execute following commands:
 	- Twitter Bootstrap as a layout framework
 	- AngularJS to make page dynamic and handle data
 	- Firebase to store data and deploy on testenv via command line
+- You'll find the working files on src folder.
+- Dist folder contains compiled files ready for deployment.
+- The styling of layout is handled in src/assets/scss/partials.
+- Once you run the command gulp serve, whenever you change and save a file in src folder a task will run and the website will be rebuilt in local, so that you can see immediately your changes.
+- On src/app/index.es6 is where you'll see the application main file, here is defined routing, page templates and controllers.
 
